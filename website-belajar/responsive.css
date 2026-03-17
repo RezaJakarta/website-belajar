@@ -1,0 +1,940 @@
+/* Large Desktop */
+@media (min-width: 1400px) {
+  .footer::after {
+    font-size: 8vw;
+  }
+}
+
+/* Desktop */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+/* Tablet Landscape */
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .about-grid,
+  .contact-grid,
+  .experience-grid,
+  .testimonials-grid,
+  .instagram-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 2fr 1fr;
+    gap: 35px;
+  }
+
+  .experience-badge {
+    width: 120px;
+    height: 120px;
+    bottom: -10px;
+    right: -10px;
+  }
+
+  .badge-year {
+    font-size: 1.5rem;
+  }
+
+  .badge-text {
+    font-size: 0.8rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 30px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero {
+    padding-top: 70px;
+  }
+
+  .hero-content {
+    padding: 80px 15px 30px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-badge-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .hero-badge,
+  .hero-badge-outline {
+    font-size: 0.8rem;
+    padding: 6px 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .floating-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .glass-card {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
+
+  .collection-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .collection-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .collection-tab {
+    white-space: nowrap;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .product-actions {
+    flex-direction: column;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .footer-certification {
+    justify-content: center;
+  }
+
+  .experience-grid,
+  .testimonials-grid,
+  .instagram-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .experience-badge {
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+    bottom: -10px;
+    right: -10px;
+  }
+
+  .badge-year {
+    font-size: 1.3rem;
+  }
+
+  .experience-section,
+  .featured-collections,
+  .testimonials,
+  .instagram-showcase,
+  .newsletter-section {
+    padding: 60px 0;
+  }
+
+  .stats {
+    padding: 50px 0;
+  }
+
+  .page-header {
+    padding: 150px 0 60px;
+  }
+
+  .page-header h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-badge-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .floating-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .glass-card {
+    width: 100%;
+    max-width: 260px;
+    justify-content: center;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-buttons {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filter-btn {
+    white-space: nowrap;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .newsletter-title {
+    font-size: 1.8rem;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    padding: 12px 30px;
+  }
+
+  .contact-card {
+    padding: 20px;
+  }
+
+  .contact-form-container {
+    padding: 30px 20px;
+  }
+
+  .toast {
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    text-align: center;
+  }
+
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .nav-container {
+    padding: 0 20px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .btn-whatsapp {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
+
+  .hero-content {
+    padding: 60px 10px 20px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero-badge,
+  .hero-badge-outline {
+    font-size: 0.75rem;
+    padding: 5px 14px;
+  }
+
+  .glass-card {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+
+  .stat-item {
+    padding: 15px;
+  }
+
+  .stat-icon {
+    font-size: 2rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+
+  .product-info {
+    padding: 20px 15px;
+  }
+
+  .product-name {
+    font-size: 1.1rem;
+  }
+
+  .product-price {
+    font-size: 1.3rem;
+  }
+
+  .footer {
+    padding: 30px 0 15px;
+  }
+
+  .footer-grid {
+    gap: 25px;
+  }
+
+  .footer-brand h3 {
+    font-size: 1.4rem;
+  }
+
+  .footer-contact-item {
+    font-size: 0.8rem;
+  }
+
+  .footer-social .social-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.7rem;
+  }
+
+  .footer-links h4 {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+
+  .footer-links a {
+    font-size: 0.8rem;
+  }
+
+  .footer-links li {
+    margin-bottom: 6px;
+  }
+
+  .footer-bottom {
+    font-size: 0.7rem;
+  }
+
+  .footer-bottom-links {
+    gap: 12px;
+  }
+
+  .footer-bottom-links a {
+    font-size: 0.7rem;
+  }
+
+  .cert-badge {
+    font-size: 0.7rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-badge,
+  .hero-badge-outline {
+    font-size: 0.7rem;
+    padding: 4px 12px;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+
+  .glass-card {
+    min-width: 140px;
+    padding: 6px 14px;
+  }
+
+  .footer-social .social-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .footer-bottom-links {
+    gap: 8px;
+  }
+}
+
+/* Print */
+@media print {
+  #preloader,
+  #navbar,
+  .back-to-top,
+  .toast,
+  .hero,
+  #three-canvas,
+  .btn-whatsapp,
+  .hamburger {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .footer {
+    background: white;
+    color: black;
+    border-top: 1px solid #ccc;
+  }
+}
+
+/* High-resolution screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 1366px) {
+  .hero-content {
+    padding-top: 100px;
+  }
+
+  .hero-badge-wrapper {
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+
+  .hero-badge,
+  .hero-badge-outline {
+    font-size: 0.8rem;
+    padding: 6px 18px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    margin-bottom: 20px;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .hero-buttons {
+    margin-bottom: 40px;
+  }
+
+  .floating-cards {
+    margin-top: 20px;
+  }
+}
+
+/* Fix untuk ukuran layar tertentu (1024px - 1200px) */
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .hero-content {
+    padding-top: 120px;
+  }
+
+  .hero-badge-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .hero-badge,
+  .hero-badge-outline {
+    font-size: 0.75rem;
+    padding: 5px 15px;
+    white-space: nowrap;
+  }
+
+  .hero-title {
+    font-size: 3.2rem;
+  }
+}
+
+/* Perbaikan untuk navbar */
+@media (max-width: 1200px) {
+  .nav-list {
+    gap: 25px;
+  }
+
+  .nav-container {
+    padding: 0 30px;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+  }
+
+  .btn-whatsapp {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero-badge-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .hero-badge,
+  .hero-badge-outline {
+    width: fit-content;
+  }
+}
+
+@media (min-width: 1101px) and (max-width: 1366px) {
+  .hero-badge-wrapper {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
+/* ==================== CATALOG PAGE RESPONSIVE FIX ==================== */
+
+/* Desktop Kecil / Tablet Landscape (992px - 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .catalog-page .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .catalog-page .product-image {
+    height: 220px;
+  }
+}
+
+/* Tablet Portrait (768px - 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+  .catalog-page .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .catalog-page .product-image {
+    height: 200px;
+  }
+
+  .catalog-page .product-info {
+    padding: 15px;
+  }
+
+  .catalog-page .product-name {
+    font-size: 1.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .catalog-page .product-description {
+    font-size: 0.85rem;
+    -webkit-line-clamp: 2;
+    margin: 8px 0;
+  }
+
+  .catalog-page .product-price {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+
+  .catalog-page .product-actions {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .catalog-page .btn-wa-small,
+  .catalog-page .btn-detail {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile Besar (576px - 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+  .catalog-page .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .catalog-page .product-image {
+    height: 180px;
+  }
+
+  .catalog-page .product-info {
+    padding: 12px;
+  }
+
+  .catalog-page .product-name {
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .catalog-page .product-category {
+    font-size: 0.7rem;
+  }
+
+  .catalog-page .product-rating {
+    margin: 5px 0;
+  }
+
+  .catalog-page .stars {
+    font-size: 0.85rem;
+  }
+
+  .catalog-page .rating-count {
+    font-size: 0.7rem;
+  }
+
+  .catalog-page .product-description {
+    display: none; /* Sembunyikan deskripsi di mobile kecil */
+  }
+
+  .catalog-page .product-price {
+    font-size: 1.1rem;
+    margin: 8px 0;
+  }
+
+  .catalog-page .product-actions {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .catalog-page .btn-wa-small,
+  .catalog-page .btn-detail {
+    padding: 8px 5px;
+    font-size: 0.75rem;
+    width: 100%;
+  }
+
+  .catalog-page .quick-actions {
+    top: 8px;
+    right: 8px;
+  }
+
+  .catalog-page .quick-action-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Kecil (575px ke bawah) */
+@media (max-width: 575px) {
+  .catalog-page .product-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .catalog-page .product-image {
+    height: 220px;
+  }
+
+  .catalog-page .product-info {
+    padding: 15px;
+  }
+
+  .catalog-page .product-name {
+    font-size: 1.2rem;
+  }
+
+  .catalog-page .product-description {
+    font-size: 0.9rem;
+    -webkit-line-clamp: 2;
+  }
+
+  .catalog-page .product-price {
+    font-size: 1.3rem;
+  }
+
+  .catalog-page .product-actions {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .catalog-page .btn-wa-small,
+  .catalog-page .btn-detail {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ==================== SINGLE PRODUCT FIX ==================== */
+/* Ketika hanya 1 produk yang tampil */
+.product-grid:has(.product-card:only-child) {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-grid:has(.product-card:only-child) .product-card {
+  max-width: 350px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Tablet - single product */
+@media (max-width: 991px) {
+  .product-grid:has(.product-card:only-child) .product-card {
+    max-width: 320px;
+  }
+}
+
+/* Mobile - single product */
+@media (max-width: 767px) {
+  .product-grid:has(.product-card:only-child) .product-card {
+    max-width: 100%;
+  }
+}
+
+/* ==================== CATALOG TOOLBAR FIX ==================== */
+@media (max-width: 767px) {
+  .catalog-toolbar {
+    gap: 15px;
+  }
+
+  .catalog-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .sort-select {
+    width: 100%;
+    padding: 10px 15px;
+  }
+
+  .filter-buttons {
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 6px 15px;
+    font-size: 0.8rem;
+  }
+
+  .search-input {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-buttons {
+    gap: 5px;
+  }
+
+  .filter-btn {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+
+  .result-count {
+    font-size: 0.8rem;
+  }
+}
+
+/* ==================== PRODUCT CARD PERBAIKAN ==================== */
+/* Pastikan semua card memiliki tinggi yang konsisten */
+.catalog-page .product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.catalog-page .product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-page .product-description {
+  flex: 1;
+  margin-bottom: 15px;
+}
+
+.catalog-page .product-actions {
+  margin-top: auto;
+}
+
+/* Sembunyikan quick actions di mobile karena susah di-hover */
+@media (max-width: 767px) {
+  .quick-actions {
+    opacity: 1;
+    transform: translateY(0);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    padding: 5px;
+  }
+
+  .quick-action-btn {
+    width: 35px;
+    height: 35px;
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* ==================== NO RESULTS FIX ==================== */
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+  font-size: 1.1rem;
+  border: 2px dashed rgba(198, 164, 92, 0.3);
+  border-radius: 16px;
+  margin: 40px 0;
+}
+
+@media (max-width: 767px) {
+  .no-results {
+    padding: 40px 15px;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="G&M Store - Premium elegance since 2020. Temukan koleksi eksklusif produk premium berkualitas tinggi."
+    />
+    <meta
+      name="keywords"
+      content="premium store, luxury goods, exclusive collection, indonesia"
+    />
+    <meta name="author" content="G&M Store" />
+    <meta property="og:title" content="G&M Store | Home of Premium Elegance" />
+    <meta
+      property="og:description"
+      content="Discover the finest premium selections curated for the discerning individual."
+    />
+    <meta property="og:image" content="image/og-image.jpg" />
+    <meta property="og:url" content="https://gmstore.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>G&M Store | Home of Premium Elegance</title>
+    <link rel="preload" href="style.css" as="style" />
+    <link rel="preload" href="js/main.js" as="script" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="image/favicon.png" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div id="preloader">
+      <div class="loader-logo">G&M Store</div>
+      <div class="loader-progress">
+        <div class="loader-progress-bar"></div>
+      </div>
+      <div class="loader-subtitle" data-i18n="preloader.subtitle">
+        Premium Collection
+      </div>
+    </div>
+
+    <header id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo" aria-label="G&M Store Home"
+          >G&M Store</a
+        >
+        <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li>
+              <a
+                href="index.html"
+                class="nav-link active"
+                aria-current="page"
+                data-i18n="nav.home"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="about.html" class="nav-link" data-i18n="nav.about"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="catalog.html" class="nav-link" data-i18n="nav.catalog"
+                >Catalog</a
+              >
+            </li>
+            <li>
+              <a href="contact.html" class="nav-link" data-i18n="nav.contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle dark mode"
+          >
+            <span class="theme-icon">🌙</span>
+          </button>
+          <button
+            class="wishlist-indicator"
+            id="wishlistIndicator"
+            aria-label="Wishlist"
+          >
+            <span class="wishlist-icon">❤️</span>
+            <span class="wishlist-count" id="wishlistCount">0</span>
+          </button>
+          <a
+            href="https://wa.me/6285811139858?text=Hello%20G%26M%20Store%2C%20I%20need%20a%20premium%20product%20information"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-whatsapp nav-wa"
+            aria-label="Chat on WhatsApp"
+            data-i18n="nav.whatsapp"
+            >WhatsApp</a
+          >
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="home" class="hero">
+        <div id="three-canvas" aria-hidden="true"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-backtext">PREMIUM</div>
+        <div class="hero-content container">
+          <div class="hero-badge-wrapper">
+            <span class="hero-badge" data-i18n="hero.badge.since"
+              >Since 2020</span
+            >
+            <span class="hero-badge-outline" data-i18n="hero.badge.exclusive"
+              >Exclusive</span
+            >
+          </div>
+          <h1 class="hero-title">
+            <span class="title-line" data-i18n="hero.title.line1"
+              >Where Elegance</span
+            >
+            <span class="title-line" data-i18n="hero.title.line2"
+              >Meets <span class="gold-text">Luxury</span></span
+            >
+          </h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            Discover the finest premium selections curated for the discerning
+            individual. Experience unparalleled quality and timeless design.
+          </p>
+          <div class="hero-buttons">
+            <a
+              href="#featured"
+              class="btn-primary btn-glow"
+              data-i18n="hero.button.collection"
+              >Explore Collection</a
+            >
+            <a
+              href="https://wa.me/6285811139858?text=Hello%20G%26M%20Store%2C%20I%20want%20to%20know%20more%20about%20your%20premium%20collection"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-outline"
+              data-i18n="hero.button.concierge"
+              >Chat with Concierge</a
+            >
+          </div>
+          <div class="floating-cards">
+            <div class="glass-card" data-tooltip="Hand-selected premium items">
+              <span class="card-icon">★</span>
+              <span data-i18n="card.premium">Premium Quality</span>
+            </div>
+            <div class="glass-card" data-tooltip="Response within 24 hours">
+              <span class="card-icon">⚡</span>
+              <span data-i18n="card.fast">Fast Response</span>
+            </div>
+            <div class="glass-card" data-tooltip="100% satisfaction guaranteed">
+              <span class="card-icon">✓</span>
+              <span data-i18n="card.trusted">Trusted Service</span>
+            </div>
+            <div class="glass-card" data-tooltip="Free shipping worldwide">
+              <span class="card-icon">🌍</span>
+              <span data-i18n="card.shipping">Worldwide Shipping</span>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true">
+          <span class="scroll-text" data-i18n="hero.scroll">Scroll</span>
+          <span class="scroll-line"></span>
+        </div>
+      </section>
+
+      <section class="brand-showcase" aria-label="Brand highlights">
+        <div class="container">
+          <div class="marquee" aria-hidden="true">
+            <div class="marquee-content">
+              <span>✦ PREMIUM QUALITY ✦</span>
+              <span>✦ EXCLUSIVE COLLECTION ✦</span>
+              <span>✦ TIMELESS DESIGN ✦</span>
+              <span>✦ LUXURY CRAFTSMANSHIP ✦</span>
+              <span>✦ PREMIUM QUALITY ✦</span>
+              <span>✦ EXCLUSIVE COLLECTION ✦</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Company statistics">
+        <div class="container">
+          <div class="section-header centered">
+            <span class="section-badge" data-i18n="stats.badge"
+              >Our Numbers</span
+            >
+            <h2 class="section-title" data-i18n="stats.title">
+              By the <span class="gold-text">Numbers</span>
+            </h2>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-icon">★</div>
+              <div class="stat-number" data-target="150" data-suffix="+">0</div>
+              <div class="stat-label" data-i18n="stats.products">
+                Premium Products
+              </div>
+              <div class="stat-trend" data-i18n="stats.trend.products">
+                +25 this year
+              </div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-icon">⌚</div>
+              <div class="stat-number" data-target="15" data-suffix="">0</div>
+              <div class="stat-label" data-i18n="stats.categories">
+                Exclusive Categories
+              </div>
+              <div class="stat-trend" data-i18n="stats.trend.categories">
+                Luxury selection
+              </div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-icon">✓</div>
+              <div class="stat-number" data-target="850" data-suffix="+">0</div>
+              <div class="stat-label" data-i18n="stats.clients">
+                Happy Clients
+              </div>
+              <div class="stat-trend" data-i18n="stats.trend.clients">
+                98% satisfaction
+              </div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-icon">⚡</div>
+              <div class="stat-number" data-target="24" data-suffix="h">0</div>
+              <div class="stat-label" data-i18n="stats.response">
+                Fast Response
+              </div>
+              <div class="stat-trend" data-i18n="stats.trend.response">
+                Average reply time
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="featured" class="featured-collections">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge" data-i18n="featured.badge"
+              >Curated Selection</span
+            >
+            <h2 class="section-title" data-i18n="featured.title">
+              Featured <span class="gold-text">Collections</span>
+            </h2>
+            <p class="section-description" data-i18n="featured.description">
+              Discover our most sought-after pieces, carefully selected for the
+              modern connoisseur.
+            </p>
+          </div>
+          <div class="collection-tabs" role="tablist">
+            <button
+              class="collection-tab active"
+              data-category="all"
+              role="tab"
+              aria-selected="true"
+              data-i18n="featured.tab.all"
+            >
+              All
+            </button>
+            <button
+              class="collection-tab"
+              data-category="Signature Collection"
+              role="tab"
+              data-i18n="featured.tab.signature"
+            >
+              Signature
+            </button>
+            <button
+              class="collection-tab"
+              data-category="Best Seller"
+              role="tab"
+              data-i18n="featured.tab.bestseller"
+            >
+              Best Sellers
+            </button>
+            <button
+              class="collection-tab"
+              data-category="New Arrival"
+              role="tab"
+              data-i18n="featured.tab.new"
+            >
+              New Arrivals
+            </button>
+            <button
+              class="collection-tab"
+              data-category="Limited Edition"
+              role="tab"
+              data-i18n="featured.tab.limited"
+            >
+              Limited
+            </button>
+          </div>
+          <div class="product-grid" id="featuredProducts"></div>
+          <div class="section-footer">
+            <a
+              href="catalog.html"
+              class="btn-outline btn-large"
+              data-i18n="featured.button.full"
+              >View Full Collection</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="experience-section" aria-label="Our experience">
+        <div class="container">
+          <div class="experience-grid">
+            <div class="experience-content">
+              <span class="section-badge" data-i18n="experience.badge"
+                >The Experience</span
+              >
+              <h2 class="section-title" data-i18n="experience.title">
+                Beyond <span class="gold-text">Products</span>
+              </h2>
+              <p class="experience-text" data-i18n="experience.text">
+                At G&M Store, we believe in creating moments of pure luxury.
+                Every piece tells a story of craftsmanship, passion, and
+                dedication to excellence.
+              </p>
+              <div class="experience-features">
+                <div class="exp-feature">
+                  <div class="exp-icon">✧</div>
+                  <div>
+                    <h4 data-i18n="experience.feature1.title">Hand-Selected</h4>
+                    <p data-i18n="experience.feature1.text">
+                      Each item personally curated by our experts
+                    </p>
+                  </div>
+                </div>
+                <div class="exp-feature">
+                  <div class="exp-icon">✧</div>
+                  <div>
+                    <h4 data-i18n="experience.feature2.title">
+                      Certificate of Authenticity
+                    </h4>
+                    <p data-i18n="experience.feature2.text">
+                      Every purchase includes verification
+                    </p>
+                  </div>
+                </div>
+                <div class="exp-feature">
+                  <div class="exp-icon">✧</div>
+                  <div>
+                    <h4 data-i18n="experience.feature3.title">
+                      White-Glove Service
+                    </h4>
+                    <p data-i18n="experience.feature3.text">
+                      Personalized assistance from start to finish
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="about.html"
+                class="btn-link"
+                data-i18n="experience.button"
+                >Discover Our Story <span>→</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials" aria-label="Customer testimonials">
+        <div class="container">
+          <div class="section-header centered">
+            <span class="section-badge" data-i18n="testimonials.badge"
+              >Testimonials</span
+            >
+            <h2 class="section-title" data-i18n="testimonials.title">
+              What Our <span class="gold-text">Clients Say</span>
+            </h2>
+          </div>
+          <div class="testimonials-carousel" id="testimonialsCarousel">
+            <button
+              class="carousel-arrow prev"
+              aria-label="Previous testimonial"
+            >
+              ←
+            </button>
+            <div class="testimonials-grid" id="testimonialsGrid"></div>
+            <button class="carousel-arrow next" aria-label="Next testimonial">
+              →
+            </button>
+          </div>
+          <div class="carousel-dots" id="testimonialDots"></div>
+        </div>
+      </section>
+
+      <section class="newsletter-section" aria-label="Newsletter subscription">
+        <div class="container">
+          <div class="newsletter-content">
+            <h2 class="newsletter-title" data-i18n="newsletter.title">
+              Join the <span class="gold-text">Exclusive Circle</span>
+            </h2>
+            <p class="newsletter-text" data-i18n="newsletter.text">
+              Be the first to know about new collections, exclusive offers, and
+              private events.
+            </p>
+            <form class="newsletter-form" id="newsletterForm" novalidate>
+              <div class="form-group">
+                <input
+                  type="email"
+                  placeholder="Your email address"
+                  data-i18n-attr="placeholder:newsletter.placeholder"
+                  required
+                  aria-label="Email address"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                />
+                <div class="form-error" aria-live="polite"></div>
+              </div>
+              <button
+                type="submit"
+                class="btn-primary"
+                data-i18n="newsletter.button"
+              >
+                Subscribe
+              </button>
+            </form>
+            <div class="social-proof">
+              <span data-i18n="newsletter.social"
+                >Join 5,000+ premium members</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="instagram-showcase" aria-label="Instagram feed">
+        <div class="container">
+          <div class="section-header centered">
+            <span class="section-badge" data-i18n="instagram.badge"
+              >@gmstore</span
+            >
+            <h2 class="section-title" data-i18n="instagram.title">
+              Follow Us on <span class="gold-text">Instagram</span>
+            </h2>
+          </div>
+          <div class="instagram-grid" id="instagramGrid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" aria-label="Footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3>G&M Store</h3>
+            <p data-i18n="footer.brand.text">
+              Curating elegance for the modern elite. Discover timeless luxury
+              since 2020.
+            </p>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon" aria-hidden="true">📞</div>
+              <a
+                href="https://wa.me/6285811139858"
+                target="_blank"
+                rel="noopener noreferrer"
+                >+62 858-1113-9858</a
+              >
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon" aria-hidden="true">✉️</div>
+              <a href="mailto:gmfamily.story@gmail.com"
+                >gmfamily.story@gmail.com</a
+              >
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon" aria-hidden="true">📍</div>
+              <span>Plaza Indonesia, Jakarta</span>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon" aria-hidden="true">⏰</div>
+              <span>Mon - Fri: 10am - 7pm</span>
+            </div>
+            <div class="footer-social">
+              <a
+                href="#"
+                class="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                >IG</a
+              >
+              <a
+                href="#"
+                class="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                >FB</a
+              >
+              <a
+                href="#"
+                class="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+                >TW</a
+              >
+              <a
+                href="#"
+                class="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Pinterest"
+                >PT</a
+              >
+              <a
+                href="#"
+                class="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                >YT</a
+              >
+            </div>
+          </div>
+          <div class="footer-links">
+            <h4 data-i18n="footer.navigation">Navigation</h4>
+            <ul>
+              <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+              <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+              <li>
+                <a href="catalog.html" data-i18n="nav.catalog">Catalog</a>
+              </li>
+              <li>
+                <a href="contact.html" data-i18n="nav.contact">Contact</a>
+              </li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4 data-i18n="footer.collections">Collections</h4>
+            <ul>
+              <li>
+                <a
+                  href="catalog.html?category=Signature"
+                  data-i18n="featured.tab.signature"
+                  >Signature Collection</a
+                >
+              </li>
+              <li>
+                <a
+                  href="catalog.html?category=Best Seller"
+                  data-i18n="featured.tab.bestseller"
+                  >Best Sellers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="catalog.html?category=New Arrival"
+                  data-i18n="featured.tab.new"
+                  >New Arrivals</a
+                >
+              </li>
+              <li>
+                <a
+                  href="catalog.html?category=Limited Edition"
+                  data-i18n="featured.tab.limited"
+                  >Limited Edition</a
+                >
+              </li>
+              <li>
+                <a href="catalog.html?category=Premium Series"
+                  >Premium Series</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            <p data-i18n="footer.copyright">
+              © 2026 G&M Store. All rights reserved. Premium elegance since
+              2020.
+            </p>
+          </div>
+          <div class="footer-bottom-links">
+            <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+            <a href="#" data-i18n="footer.terms">Terms of Service</a>
+            <a href="#" data-i18n="footer.shipping">Shipping</a>
+            <a href="#" data-i18n="footer.returns">Returns</a>
+          </div>
+          <div class="footer-certification">
+            <div class="cert-badge">
+              <span>✦</span> <span data-i18n="footer.authentic">Authentic</span>
+            </div>
+            <div class="cert-badge">
+              <span>✦</span>
+              <span data-i18n="footer.satisfaction">100% Satisfaction</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="quickViewModal" class="modal" aria-hidden="true">
+      <div class="modal-overlay" tabindex="-1"></div>
+      <div
+        class="modal-content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <div class="modal-grid">
+          <div class="modal-image">
+            <img
+              src=""
+              alt="Product Image"
+              id="modalProductImage"
+              loading="lazy"
+            />
+          </div>
+          <div class="modal-details">
+            <span class="modal-category" id="modalProductCategory"></span>
+            <h2 class="modal-title" id="modalProductName"></h2>
+            <div class="modal-rating">
+              <span class="stars" id="modalProductStars">★★★★★</span>
+              <span class="rating-text" id="modalProductReviews"></span>
+            </div>
+            <p class="modal-description" id="modalProductDescription"></p>
+
+            <div class="modal-specs">
+              <div class="spec-item">
+                <span class="spec-label" data-i18n="modal.material"
+                  >Material</span
+                >
+                <span class="spec-value" id="modalProductMaterial"></span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label" data-i18n="modal.origin">Origin</span>
+                <span class="spec-value" id="modalProductOrigin"></span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label" data-i18n="modal.warranty"
+                  >Warranty</span
+                >
+                <span class="spec-value" id="modalProductWarranty"></span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label" data-i18n="modal.availability"
+                  >Availability</span
+                >
+                <span class="spec-value" id="modalProductStock"></span>
+              </div>
+            </div>
+
+            <div class="modal-price">
+              <span class="price-label" data-i18n="modal.price">Price</span>
+              <span class="price-value" id="modalProductPrice"></span>
+            </div>
+
+            <div class="modal-actions">
+              <a
+                href="#"
+                id="modalWhatsAppBtn"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-primary modal-wa"
+                data-i18n="modal.wa"
+                >Chat WhatsApp</a
+              >
+              <button
+                class="btn-outline modal-wishlist"
+                id="modalWishlistBtn"
+                data-i18n="modal.wishlist.add"
+              >
+                Add to Wishlist
+              </button>
+            </div>
+
+            <div class="modal-features" id="modalFeatures"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" role="alert" aria-live="assertive"></div>
+
+    <!-- HANYA SATU, jangan dobel -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      ↑
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/i18n/en.js"></script>
+    <script src="js/i18n/id.js"></script>
+    <script src="js/i18n/i18n.js"></script>
+    <script src="js/data/products.js"></script>
+    <script src="js/utils/helpers.js"></script>
+    <script src="js/components/wishlist.js"></script>
+    <script src="js/components/modal.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>

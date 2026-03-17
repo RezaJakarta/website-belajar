@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="G&M Store - Explore our carefully curated selection of premium products."
+    />
+    <title>G&M Store | Catalog - Premium Collection</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="image/favicon.png" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo" aria-label="G&M Store Home"
+          >G&M Store</a
+        >
+        <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li>
+              <a href="index.html" class="nav-link" data-i18n="nav.home"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="about.html" class="nav-link" data-i18n="nav.about"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="catalog.html"
+                class="nav-link active"
+                aria-current="page"
+                data-i18n="nav.catalog"
+                >Catalog</a
+              >
+            </li>
+            <li>
+              <a href="contact.html" class="nav-link" data-i18n="nav.contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle dark mode"
+          >
+            <span class="theme-icon">🌙</span>
+          </button>
+          <button
+            class="wishlist-indicator"
+            id="wishlistIndicator"
+            aria-label="Wishlist"
+          >
+            <span class="wishlist-icon">❤️</span>
+            <span class="wishlist-count" id="wishlistCount">0</span>
+          </button>
+          <a
+            href="https://wa.me/6285811139858?text=Hello%20G%26M%20Store%2C%20I%20need%20a%20premium%20product%20information"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-whatsapp nav-wa"
+            aria-label="Chat on WhatsApp"
+            data-i18n="nav.whatsapp"
+            >WhatsApp</a
+          >
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="page-header">
+      <div class="container">
+        <h1 data-i18n="catalog.header.title">
+          Our <span class="gold-text">Collection</span>
+        </h1>
+        <p data-i18n="catalog.header.text">
+          Explore our carefully curated selection of premium products
+        </p>
+      </div>
+    </section>
+
+    <main id="main-content">
+      <section class="catalog-page">
+        <div class="container">
+          <div class="catalog-toolbar">
+            <div style="position: relative">
+              <input
+                type="text"
+                id="searchInput"
+                class="search-input"
+                placeholder="Search premium products..."
+                data-i18n-attr="placeholder:catalog.search.placeholder"
+              />
+            </div>
+            <div class="catalog-header">
+              <span class="result-count" id="resultCount"
+                ><span data-i18n="catalog.showing">Showing</span> 9
+                <span data-i18n="catalog.products">products</span></span
+              >
+              <select id="sortSelect" class="sort-select">
+                <option value="default" data-i18n="catalog.sort.default">
+                  Default
+                </option>
+                <option value="price-low" data-i18n="catalog.sort.price.low">
+                  Price: Low to High
+                </option>
+                <option value="price-high" data-i18n="catalog.sort.price.high">
+                  Price: High to Low
+                </option>
+                <option value="name-asc" data-i18n="catalog.sort.name.asc">
+                  Name: A to Z
+                </option>
+                <option value="name-desc" data-i18n="catalog.sort.name.desc">
+                  Name: Z to A
+                </option>
+                <option value="rating" data-i18n="catalog.sort.rating">
+                  Rating
+                </option>
+              </select>
+            </div>
+            <div class="filter-buttons">
+              <button
+                class="filter-btn active"
+                data-filter="all"
+                data-i18n="catalog.filter.all"
+              >
+                All
+              </button>
+              <button
+                class="filter-btn"
+                data-filter="Signature Collection"
+                data-i18n="catalog.filter.signature"
+              >
+                Signature
+              </button>
+              <button
+                class="filter-btn"
+                data-filter="Best Seller"
+                data-i18n="catalog.filter.bestseller"
+              >
+                Best Seller
+              </button>
+              <button
+                class="filter-btn"
+                data-filter="New Arrival"
+                data-i18n="catalog.filter.new"
+              >
+                New Arrival
+              </button>
+              <button
+                class="filter-btn"
+                data-filter="Limited Edition"
+                data-i18n="catalog.filter.limited"
+              >
+                Limited
+              </button>
+              <button
+                class="filter-btn"
+                data-filter="Premium Series"
+                data-i18n="catalog.filter.premium"
+              >
+                Premium
+              </button>
+            </div>
+          </div>
+          <div class="product-grid" id="productGrid"></div>
+          <div id="noResults" class="no-results" data-i18n="catalog.noresults">
+            No products found.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" aria-label="Footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3>G&M Store</h3>
+            <p data-i18n="footer.brand.text">
+              Curating elegance for the modern elite. Discover timeless luxury
+              since 2020.
+            </p>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon" aria-hidden="true">📞</div>
+              <a
+                href="https://wa.me/6285811139858"
+                target="_blank"
+                rel="noopener noreferrer"
+                >+62 858-1113-9858</a
+              >
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon" aria-hidden="true">✉️</div>
+              <a href="mailto:gmfamily.story@gmail.com"
+                >gmfamily.story@gmail.com</a
+              >
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon" aria-hidden="true">📍</div>
+              <span>Plaza Indonesia, Jakarta</span>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon" aria-hidden="true">⏰</div>
+              <span>Mon - Fri: 10am - 7pm</span>
+            </div>
+            <div class="footer-social">
+              <a
+                href="#"
+                class="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                >IG</a
+              >
+              <a
+                href="#"
+                class="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                >FB</a
+              >
+              <a
+                href="#"
+                class="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+                >TW</a
+              >
+              <a
+                href="#"
+                class="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Pinterest"
+                >PT</a
+              >
+              <a
+                href="#"
+                class="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                >YT</a
+              >
+            </div>
+          </div>
+          <div class="footer-links">
+            <h4 data-i18n="footer.navigation">Navigation</h4>
+            <ul>
+              <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+              <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+              <li>
+                <a href="catalog.html" data-i18n="nav.catalog">Catalog</a>
+              </li>
+              <li>
+                <a href="contact.html" data-i18n="nav.contact">Contact</a>
+              </li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4 data-i18n="footer.collections">Collections</h4>
+            <ul>
+              <li>
+                <a
+                  href="catalog.html?category=Signature"
+                  data-i18n="featured.tab.signature"
+                  >Signature Collection</a
+                >
+              </li>
+              <li>
+                <a
+                  href="catalog.html?category=Best Seller"
+                  data-i18n="featured.tab.bestseller"
+                  >Best Sellers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="catalog.html?category=New Arrival"
+                  data-i18n="featured.tab.new"
+                  >New Arrivals</a
+                >
+              </li>
+              <li>
+                <a
+                  href="catalog.html?category=Limited Edition"
+                  data-i18n="featured.tab.limited"
+                  >Limited Edition</a
+                >
+              </li>
+              <li>
+                <a href="catalog.html?category=Premium Series"
+                  >Premium Series</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            <p data-i18n="footer.copyright">
+              © 2026 G&M Store. All rights reserved. Premium elegance since
+              2020.
+            </p>
+          </div>
+          <div class="footer-bottom-links">
+            <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+            <a href="#" data-i18n="footer.terms">Terms of Service</a>
+            <a href="#" data-i18n="footer.shipping">Shipping</a>
+            <a href="#" data-i18n="footer.returns">Returns</a>
+          </div>
+          <div class="footer-certification">
+            <div class="cert-badge">
+              <span>✦</span> <span data-i18n="footer.authentic">Authentic</span>
+            </div>
+            <div class="cert-badge">
+              <span>✦</span>
+              <span data-i18n="footer.satisfaction">100% Satisfaction</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="quickViewModal" class="modal" aria-hidden="true">
+      <div class="modal-overlay" tabindex="-1"></div>
+      <div
+        class="modal-content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <div class="modal-grid">
+          <div class="modal-image">
+            <img
+              src=""
+              alt="Product Image"
+              id="modalProductImage"
+              loading="lazy"
+            />
+          </div>
+          <div class="modal-details">
+            <span class="modal-category" id="modalProductCategory"></span>
+            <h2 class="modal-title" id="modalProductName"></h2>
+            <div class="modal-rating">
+              <span class="stars" id="modalProductStars">★★★★★</span>
+              <span class="rating-text" id="modalProductReviews"></span>
+            </div>
+            <p class="modal-description" id="modalProductDescription"></p>
+
+            <div class="modal-specs">
+              <div class="spec-item">
+                <span class="spec-label" data-i18n="modal.material"
+                  >Material</span
+                >
+                <span class="spec-value" id="modalProductMaterial"></span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label" data-i18n="modal.origin">Origin</span>
+                <span class="spec-value" id="modalProductOrigin"></span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label" data-i18n="modal.warranty"
+                  >Warranty</span
+                >
+                <span class="spec-value" id="modalProductWarranty"></span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label" data-i18n="modal.availability"
+                  >Availability</span
+                >
+                <span class="spec-value" id="modalProductStock"></span>
+              </div>
+            </div>
+
+            <div class="modal-price">
+              <span class="price-label" data-i18n="modal.price">Price</span>
+              <span class="price-value" id="modalProductPrice"></span>
+            </div>
+
+            <div class="modal-actions">
+              <a
+                href="#"
+                id="modalWhatsAppBtn"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-primary modal-wa"
+                data-i18n="modal.wa"
+                >Chat WhatsApp</a
+              >
+              <button
+                class="btn-outline modal-wishlist"
+                id="modalWishlistBtn"
+                data-i18n="modal.wishlist.add"
+              >
+                Add to Wishlist
+              </button>
+            </div>
+
+            <div class="modal-features" id="modalFeatures"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" role="alert" aria-live="assertive"></div>
+
+    <!-- HANYA SATU, jangan dobel -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      ↑
+    </button>
+
+    <script src="js/i18n/en.js"></script>
+    <script src="js/i18n/id.js"></script>
+    <script src="js/i18n/i18n.js"></script>
+    <script src="js/data/products.js"></script>
+    <script src="js/utils/helpers.js"></script>
+    <script src="js/components/wishlist.js"></script>
+    <script src="js/components/modal.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/catalog.js"></script>
+  </body>
+</html>
